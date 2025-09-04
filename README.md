@@ -25,7 +25,6 @@ np.save("X_normalized.npy", X_normalized)
 
 # (Optional) Display results
 print("Original X:\n", X)
-print("\nMean:", mean, "  Std:", std)
 print("\nNormalized X:\n", X_normalized)
 ````
 Line-by-line (quick)
@@ -58,7 +57,7 @@ div_by_3 = A[A % 3 == 0]
 np.save("div_by_3.npy", div_by_3)
 
 # (Optional) Display results
-print("\nA (10x10 squares):\n", A)
+print("\n", A)
 print("\nValues divisible by 3:\n", div_by_3)
 ````
 #### How does it work?
