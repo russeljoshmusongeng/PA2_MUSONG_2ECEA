@@ -28,6 +28,7 @@ print("\nNormalized X:\n", X_normalized)
 ### How does it work?
 
 np.random.rand(5, 5)
+
 This makes a 5×5 table (matrix) filled with random numbers between 0 and 1.
 Example: 0.23, 0.78, etc.
 
