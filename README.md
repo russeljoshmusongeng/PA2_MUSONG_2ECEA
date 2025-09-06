@@ -5,13 +5,11 @@
 Goal: Generate a random 5×5 array, compute mean and standard deviation, then normalize.
 
 ````
+# Library to open mathematical and logical functions
 import numpy as np
 
-# Optional: fix randomness for reproducible results in demos/regrading
-# np.random.seed(0)
-
 # Create random 5x5 ndarray
-X = np.random.rand(5, 5)                 # values in [0, 1)
+X = np.random.rand(5, 5)       
 
 # Compute mean and standard deviation (population)
 mean = X.mean()
@@ -20,14 +18,14 @@ std = X.std()
 # Normalize: Z = (X - mean) / std
 X_normalized = (X - mean) / std
 
-# Save artifact (NO SPACE in filename)
+# Save file
 np.save("X_normalized.npy", X_normalized)
 
 # (Optional) Display results
 print("Original X:\n", X)
 print("\nNormalized X:\n", X_normalized)
 ````
-Line-by-line (quick)
+### How does it work?
 
 np.random.rand(5, 5) → 5×5 matrix of floats in [0, 1).
 
@@ -44,6 +42,7 @@ Use X_normalized.npy.
 Goal: Build a 10×10 matrix of squares of 1..100, then filter numbers divisible by 3.
 
 ```
+# Library to open mathematical and logical functions
 import numpy as np
 
 # Create squares of 1..100, then reshape to 10x10
@@ -60,7 +59,7 @@ np.save("div_by_3.npy", div_by_3)
 print("\n", A)
 print("\nValues divisible by 3:\n", div_by_3)
 ````
-#### How does it work?
+### How does it work?
 
 np.arange(1, 101) → array [1, 2, ..., 100].
 
@@ -74,8 +73,11 @@ A[mask] → filters only elements where mask is True.
 
 np.save("div_by_3.npy", div_by_3) → saves the filtered 1D array.
 
-#### Output Artifacts to Submit
 
-X_normalized.npy – normalized 5×5 array (float64 by default)
+#### Outputs
+
+X_normalized.npy – normalized 5×5 array
 
 div_by_3.npy – 1D array of all squared numbers (from 1..100) divisible by 3
+
+For more details, refer to the file codes, thank you!
