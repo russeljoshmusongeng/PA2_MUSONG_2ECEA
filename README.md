@@ -27,25 +27,25 @@ print("\nNormalized X:\n", X_normalized)
 ````
 ### How does it work?
 
-np.random.rand(5, 5)
+````np.random.rand(5, 5)````
 
 This makes a 5×5 table (matrix) filled with random numbers between 0 and 1.
 Example: 0.23, 0.78, etc.
 
-.mean() and .std()
+````.mean() and .std()````
 
 Mean: the “average” of all 25 numbers.
 
 Standard deviation (std): tells how “spread out” the numbers are around the average.
 
-(X - mean) / std
+````(X - mean) / std````
 
 
 First, subtract the average from every number. This makes the data “centered” at 0.
 Then, divide by the standard deviation so the values aren’t too spread out or too squished.
 Result: a new version of the table where the average = 0 and the “spread” = about 1.
 
-np.save("X_normalized.npy", X_normalized)
+````np.save("X_normalized.npy", X_normalized)````
 
 Finally, it saves the normalized table into a file named X_normalized.npy so you can load it later without recomputing.
 
@@ -77,32 +77,32 @@ print("\nValues divisible by 3:\n", div_by_3)
 ````
 ### How does it work?
 
-np.arange(1, 101)
+````np.arange(1, 101)````
 
 Think of this like writing numbers from 1 up to 100 in a straight line.
 
-** 2 (squaring)
+````** 2 (squaring)````
 
 Each number is then squared (multiplied by itself).
 Example: 2 → 4, 3 → 9, …, 100 → 10,000.
 So now you’ve got 100 squared numbers in a row.
 
-.reshape(10, 10)
+````.reshape(10, 10)````
 
 Instead of keeping them in one long line, we arrange them into a table with 10 rows and 10 columns.
 Imagine turning a list into a neat 10×10 grid.
 
-A % 3 == 0
+````A % 3 == 0````
 
 This checks which numbers in the grid can be divided evenly by 3.
 It creates a map of “True” (yes, divisible) and “False” (no, not divisible).
 
-A[mask]
+````A[]````
 
 Using that map, we pick out only the numbers that are divisible by 3.
 The result is just a smaller list of those “good” numbers.
 
-np.save("div_by_3.npy", div_by_3)
+````np.save("div_by_3.npy", div_by_3)````
 
 Finally, we save this smaller list into a file called div_by_3.npy so it can be loaded again later.
 
