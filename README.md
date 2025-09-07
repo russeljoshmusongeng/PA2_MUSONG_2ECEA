@@ -1,5 +1,7 @@
 #### PA2_MUSONG_2ECEA
 
+This programming activity (PA2) focused on applying NumPy functions to solve two problems involving arrays and mathematical operations. These exercises highlighted how NumPy can be used to create, transform, and filter datasets efficiently. They also introduced key concepts in data science workflows such as normalization and conditional selection, with results stored in .npy files for reproducibility.
+
 #### Problem 1 — Normalization
 
 Goal: Generate a random 5×5 array, compute mean and standard deviation, then normalize.
