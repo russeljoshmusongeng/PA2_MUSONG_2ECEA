@@ -27,6 +27,8 @@ np.save("X_normalized.npy", X_normalized)
 print("Original X:\n", X)
 print("\nNormalized X:\n", X_normalized)
 ````
+I made a 5×5 random table using ````np.random.rand()````. Then I computed the mean (average) and standard deviation (spread of numbers). I normalized the values by doing (X – mean) / std, which adjusts the data so the new average is 0 and the spread is 1. I saved the result using ````np.save()````. NumPy makes this short and efficient, instead of looping through 25 numbers manually.
+
 ### How does it work?
 
 ````np.random.rand(5, 5)````
@@ -53,7 +55,7 @@ Finally, it saves the normalized table into a file named X_normalized.npy so you
 
 In short: 
 
-You make a random 5×5 table → find its average and spread → adjust the numbers so they’re centered at 0 with a spread of 1 → save the result into a file.
+You make a random 5×5 table then find its average and spread then adjust the numbers so they’re centered at 0 with a spread of 1 then save the result into a file.
 
 #### Problem 2 — Divisible by 3
 
@@ -77,6 +79,8 @@ np.save("div_by_3.npy", div_by_3)
 print("\n", A)
 print("\nValues divisible by 3:\n", div_by_3)
 ````
+I generated numbers 1 to 100, squared them with ````**2````, and arranged them into a 10×10 grid using ````.reshape().```` Then, I used masking ````(A % 3 == 0)```` to quickly select the numbers divisible by 3. This method is much cleaner than checking each number with an if-statement.
+
 ### How does it work?
 
 ````np.arange(1, 101)````
